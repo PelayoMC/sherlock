@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "OHA Enhancer",
+  "version": "1.0",
+  "description": "Extensión para modificar el DOM de OHA después de que la página cargue.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{e81c3efc-e441-496e-86f5-79028ae2e47d}",
+      "strict_min_version": "109.0"
+    }
+  }
+}
